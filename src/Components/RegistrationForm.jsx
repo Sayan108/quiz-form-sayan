@@ -1,42 +1,69 @@
-import React, { useState } from 'react';
-import './RegistrationForm.css';
-
+import React, { useState } from "react";
+import "./RegistrationForm.css";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
+    id: "",
     name: "",
-    phoneNumber: "",
+    phone: "",
     email: "",
     address: "",
     gender: "",
     quiz: "",
-    screenshot: null,
+    payment_data: null,
   });
 
   const form = document.forms["submit-to-google-sheet"];
   const scriptURL =
     "https://script.google.com/macros/s/AKfycbwimYQaeOFy6KrNRlFB5K4bk1bWw-EOm8w2_RWizIMEu8RxV_1mWXVldw6_Hgzu3YwGFA/exec";
-
+  const blobFile = (file) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        resolve(event.target.result);
+      };
+      reader.readAsDataURL(file);
+    });
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleScreenshotChange = (e) => {
-    const file = e.target.files[0];
-    setFormData({ ...formData, screenshot: file });
+    if (name === "payment_data") {
+      blobFile(e.target.files).then((dataUri) => {
+        setFormData({
+          ...formData,
+          [name]: dataUri,
+        });
+      });
+    } else setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (formData.name === "" && formData.quiz === "" && formData.phone === "") {
+      alert("Please fill the required details");
+      return;
+    }
     // Handle form submission here, e.g., send data to server or Google Sheets.
 
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    fetch(scriptURL, {
+      method: "POST",
+      body: new FormData(form),
+    })
       .then((response) => {
-        console.log("Submitted");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          address: "",
+          gender: "",
+          quiz: "",
+          payment_data: null,
+        });
+        alert(`Thanks for registering with us ${formData.name} `);
       })
-      .catch((error) => console.error("Error!", error.message));
+      .catch((error) => {
+        console.error("Error!", error.message);
+        alert(`We couldn't process your request`);
+      });
   };
 
   return (
@@ -48,41 +75,26 @@ const RegistrationForm = () => {
           Name:
           <input
             type="text"
-            name="name_one"
+            name="name"
             value={formData.name}
             onChange={handleChange}
             required
           />
         </label>
+
         <label>
-          Name for perticipant two:
-          <input
-            type="text"
-            name="name_two"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Address for perticipant one:
+          Address:
           <textarea
-            name="address_one"
+            name="address"
             value={formData.address}
             onChange={handleChange}
           />
         </label>
+
         <label>
-          Address for perticipant two:
-          <textarea
-            name="address_two"
-            value={formData.address}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Gender of perticipant one:
+          Gender :
           <select
-            name="gender_one"
+            name="gender"
             value={formData.gender}
             onChange={handleChange}
             required
@@ -93,26 +105,13 @@ const RegistrationForm = () => {
             <option value="other">Other</option>
           </select>
         </label>
-        <label>
-          Gender of perticipant two:
-          <select
-            name="gender_two"
-            value={formData.gender}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </label>
+
         <label>
           Phone Number:
           <input
             type="text"
             name="phone"
-            value={formData.phoneNumber}
+            value={formData.phone}
             onChange={handleChange}
             required
           />
@@ -180,12 +179,12 @@ const RegistrationForm = () => {
           <input
             type="file"
             accept=".png, .jpg, .jpeg"
-            onChange={handleScreenshotChange}
+            onChange={handleChange}
             name="payment_data"
           />
         </label>
 
-        <button type="submit" disabled={false} onClick={handleSubmit}>
+        <button type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </form>
