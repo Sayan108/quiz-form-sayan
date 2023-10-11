@@ -31,8 +31,6 @@ const RegistrationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Handle form submission here, e.g., send data to server or Google Sheets.
-    console.log(formData);
-    // await formService(formData);
 
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => {
