@@ -70,9 +70,10 @@ const RegistrationForm = () => {
     <div className="form-container">
       <h2>Register Here! Double Header Quiz presented by CalQulas!</h2>
       <h3>Knowledge Partner: 5Point Education Centre & Business Unplugged</h3>
+      <h5>Star marked fields are mandatory</h5>
       <form name="submit-to-google-sheet" encType="multipart/form-data">
         <label>
-          Name:
+          Name *:
           <input
             type="text"
             name="name"
@@ -107,7 +108,7 @@ const RegistrationForm = () => {
         </label>
 
         <label>
-          Phone Number:
+          Phone Number *:
           <input
             type="text"
             name="phone"
@@ -127,7 +128,7 @@ const RegistrationForm = () => {
           />
         </label>
 
-        <label>Quiz(s):</label>
+        <label>Quiz(s):*</label>
         <label>
           <input
             type="radio"
