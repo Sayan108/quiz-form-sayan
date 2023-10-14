@@ -4,7 +4,11 @@ const Partners = () => {
   return (
     <>
       <div className="banner">
-        <img className="banner-img" src="assets/images/fivePointLogo.jpg"></img>
+        <img
+          className="banner-img"
+          src="assets/images/fivePointLogo.jpg"
+          alt="logo"
+        ></img>
         <h2 className="label">
           Discover Excellence at the Best Coaching Center
         </h2>
@@ -36,7 +40,9 @@ const Partners = () => {
         </h5>
         <h5 className="fivepoint-contact">
           🌐
-          <a href="https://5pointeducation.in/" target="_blank">5pointeducation.in</a>
+          <a href="https://5pointeducation.in/" target="_blank">
+            5pointeducation.in
+          </a>
         </h5>
       </div>
       <div className="banner">
@@ -59,7 +65,9 @@ const Partners = () => {
         </h5>{" "}
         <h5 className="business-contact">
           🌐
-          <a href="https://capitalbu.com/" target="_blank">https://capitalbu.com/</a>
+          <a href="https://capitalbu.com/" target="_blank">
+            https://capitalbu.com/
+          </a>
         </h5>{" "}
       </div>
     </>

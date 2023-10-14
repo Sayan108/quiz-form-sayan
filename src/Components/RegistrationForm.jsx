@@ -187,7 +187,7 @@ const RegistrationForm = () => {
               <span>UPI ID: 9051879329@paytm</span>
               <span>A/c Number- 919051879329 </span>
             </div>
-            <label className="upload-payment-text">
+            {/* <label className="upload-payment-text">
               Upload Screenshot of the Payment:
               <input
                 type="file"
@@ -195,8 +195,14 @@ const RegistrationForm = () => {
                 onChange={handleChange}
                 name="payment_data"
               />
-            </label>
-
+            </label> */}
+            <h3 style={{ color: "red" }}>
+              Please whatsapp a screenshot of your successful payment to{" "}
+              <a href="https://wa.me/+919051879329 ">
+                <u>+919051879329</u>{" "}
+              </a>{" "}
+              to validate your registration.
+            </h3>
             <button type="submit" onClick={handleSubmit}>
               Submit
             </button>
