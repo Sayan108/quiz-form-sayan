@@ -36,10 +36,16 @@ const About = () => {
           </h6>{" "}
         </li>
       </ul>
-      <h6 className="team-strength"> Team Strength: maximum 3 members per team </h6>
+      <h6 className="team-strength">
+        {" "}
+        Team Strength: maximum 3 members per team{" "}
+      </h6>
       <h6 className="venue">
         Venue: Rajpur Nabarun Sangha mini indoor complex, M. N. Roy Road,
         Rajpur, Kolkata - 700149{" "}
+        <a href="https://maps.app.goo.gl/vP7RHgxfkQbDqFhf7" target="_blank">
+          <u>Click here to see the location on Google Map</u>
+        </a>
       </h6>{" "}
       <h6 className="time"> Time: 10:30 AM onwards</h6>
       <h6 className="address-one">
@@ -47,17 +53,19 @@ const About = () => {
         Sealdah and get off at Sonarpur junction. Cross the overbridge and take
         an exit from no. 1 platform. Board an auto towards Rajpur and get off at
         "Bashtola" stoppage. Take a rickshaw mentioning the venue or ask any
-        local person about the venue, it's 10 mins walk. 
-      </h6>
-
-      <h6 className="address-two">
-        Other option: From Kavi
-        Najrul metro station, take an auto towards Rajpur/Baruipur and get off
-        at "Rajpur Phari" stoppage. Take a Sonarpur bound auto and get off at
-        "Bashtola" stoppage. Take a rickshaw mentioning the venue or ask any
         local person about the venue, it's 10 mins walk.
       </h6>
-      <h6 className="cash-rewards"> Cash rewards for the podium finishers and all finalists!</h6>
+      <h6 className="address-two">
+        Other option: From Kavi Najrul metro station, take an auto towards
+        Rajpur/Baruipur and get off at "Rajpur Phari" stoppage. Take a Sonarpur
+        bound auto and get off at "Bashtola" stoppage. Take a rickshaw
+        mentioning the venue or ask any local person about the venue, it's 10
+        mins walk.
+      </h6>
+      <h6 className="cash-rewards">
+        {" "}
+        Cash rewards for the podium finishers and all finalists!
+      </h6>
     </>
   );
 };

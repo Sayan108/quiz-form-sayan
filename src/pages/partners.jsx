@@ -9,7 +9,7 @@ const Partners = () => {
           src="assets/images/fivePointLogo.jpg"
           alt="logo"
         ></img>
-        <h2 className="label">
+        <h2 style={{ color: "white" }}>
           Discover Excellence at the Best Coaching Center
         </h2>
         <h4 className="label">
