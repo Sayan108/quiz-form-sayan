@@ -5,17 +5,17 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import Contacts from "./pages/contact";
 import Partners from "./pages/partners";
-
+export const routeAppPath = "/quiz-form-sayan";
 function App() {
   return (
     <div>
       <NavBar />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path={routeAppPath + "/"} element={<Home />} />
+          <Route path={routeAppPath + "/about"} element={<About />} />
+          <Route path={routeAppPath + "/partners"} element={<Partners />} />
+          <Route path={routeAppPath + "/contacts"} element={<Contacts />} />
         </Routes>
       </main>
     </div>

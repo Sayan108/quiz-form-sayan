@@ -1,22 +1,22 @@
 import React from "react";
 import "./RegistrationForm.css";
 import { Link } from "react-router-dom";
-
+import { routeAppPath } from "../App";
 const NavBar = () => {
   return (
     <nav>
       <h1>
-        <Link to="/"> Register with us </Link>
+        <Link to={routeAppPath + "/"}> Register with us </Link>
       </h1>
       <ul>
         <li>
-          <Link to="/about">About Us</Link>
+          <Link to={routeAppPath + "/about"}>About Us</Link>
         </li>
         <li>
-          <Link to="/partners">Our Partners</Link>
+          <Link to={routeAppPath + "/partners"}>Our Partners</Link>
         </li>
         <li>
-          <Link to="/contacts">Contact Us</Link>
+          <Link to={routeAppPath + "/contacts"}>Contact Us</Link>
         </li>
       </ul>
     </nav>
