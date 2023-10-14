@@ -4,7 +4,11 @@ const About = () => {
   return (
     <>
       <div className="banner">
-        <img className="banner-img" src="assets/images/calqulusLogo.jpg"></img>
+        <img
+          className="banner-img"
+          src="assets/images/calqulusLogo.jpg"
+          style={{ alignContent: "center" }}
+        ></img>
         <h6>
           {" "}
           CalQulus is a youth based quiz organisation that regularly hosts

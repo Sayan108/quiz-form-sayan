@@ -9,5 +9,63 @@
 .banner-img {
     display: block;
     width: 100%;
-    height: auto;
-}
+    height: 20%;
+        max-height: 200px;
+    }
+    
+    /* Container for the form */
+    .form-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+    
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Form heading */
+    h5 {
+        font-size: 10px;
+        margin-bottom: 2px;
+        color: #050505;
+    
+        font-family: 'Segoe UI';
+    }
+    
+    h6 {
+        font-size: 10px;
+        margin-bottom: 2px;
+        color: #050505;
+    
+        font-family: 'Segoe UI';
+    }
+    
+    /* Form labels and inputs */
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #333;
+    }
+    
+    
+    
+    .about-img {
+        max-width: 200px;
+        width: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 5px;
+    }
+        

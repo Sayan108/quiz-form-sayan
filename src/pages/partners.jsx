@@ -4,9 +4,13 @@ const Partners = () => {
   return (
     <>
       <div className="banner">
-        <img className="banner-img" src="assets/images/fivepointLogo.jpg"></img>
-        <h2>Discover Excellence at the Best Coaching Center</h2>
-        <h4>🏆📚 When it comes to quality education, we lead the way.</h4>
+        <img className="banner-img" src="assets/images/fivePointLogo.jpg"></img>
+        <h2 className="label">
+          Discover Excellence at the Best Coaching Center
+        </h2>
+        <h4 className="label">
+          🏆📚 When it comes to quality education, we lead the way.
+        </h4>
         <h4>Here's why we're renowned as the best coaching center:</h4>
         <h5>
           {" "}
