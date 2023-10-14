@@ -1,0 +1,82 @@
+/* contact.css */
+
+/* Styling for the contact cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    background: linear-gradient(45deg, #6164ff, #e2d73d); /* Add gradient background */
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px; /* Limit the card width */
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #fff;
+    border-radius: 10px; /* Slightly rounded corners */
+    margin: 10px 0;
+    max-height: 150px; /* Limit image height */
+  }
+  
+  h3 {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  h6 {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  h5 {
+    font-size: 16px;
+    color: #ff6f61;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      max-width: 100%;
+    }
+  
+    .card img {
+      max-height: 120px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  
+    h6 {
+      font-size: 14px;
+    }
+  
+    h5 {
+      font-size: 14px;
+    }
+  }
+  

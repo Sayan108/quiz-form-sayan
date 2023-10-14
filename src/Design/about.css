@@ -1,0 +1,158 @@
+/* about.css */
+
+/* Styling for the banner section */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #3133b1, #daf019); /* Gradient background */
+    color: #fff; /* Text color */
+    font-family: 'Arial', sans-serif; /* Change the font family */
+  }
+  
+  .banner-img {
+    max-width: 70%; /* Make the image smaller */
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the banner text */
+  .banner-text {
+    margin: 10px 0;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif; /* Change the font style */
+    color: white; /* Text color for banner text */
+    line-height: 1.5;
+    padding: 20px;
+    border: 4px solid white; /* Increase border weight and change color */
+    border-radius: 10px; /* Rounded border */
+  }
+  
+  /* Styling for the first text section */
+  .first-text {
+    margin: 20px 0;
+    font-size: 24px; /* Increase the size of the first text */
+    font-family: 'Georgia', serif; /* Change the font style */
+    color: #444; /* Text color for first text */
+  }
+  
+  /* Styling for quiz names */
+  .quiz-names li {
+    margin-bottom: 10px;
+  }
+  
+  .quiz-names h6 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff6f61; /* Reddish text color for quiz names */
+  }
+
+  .team-strength {
+    font-size: 20px;
+    font-weight: bold;
+    color: #060c3d; 
+  }
+
+  .venue {
+    font-size: 20px;
+    font-weight: bold;
+    color: #060c3d; 
+  }
+
+  .time {
+    font-size: 20px;
+    font-weight: bold;
+    color: #060c3d; 
+  }
+  
+  
+  /* General paragraph styling */
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Change the font family for general text */
+    color: #333; /* Text color for general text */
+    line-height: 1.5;
+  }
+  
+  /* Styling for address sections */
+  .address-one, .address-two {
+    font-size: 16px;
+    font-family: 'Arial', sans-serif; /* Change the font style for addresses */
+    color: #ee8937; /* Text color for addresses */
+    margin: 10px 0;
+    padding: 20px;
+    border: 4px solid #14350b; /* Increase border weight and change color */
+    border-radius: 10px; /* Rounded border */
+  }
+  
+  /* Styling for rewards text */
+  .cash-rewards {
+    font-size: 24px; /* Increase the size of cash rewards */
+    font-weight: bold;
+    color: #ff61a3; /* Change the color of cash rewards */
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .banner {
+      padding: 10px;
+    }
+  
+    .banner-img {
+      margin-bottom: 10px;
+    }
+  
+    .banner-text {
+      font-size: 16px;
+      color: #ccc; /* Lighter text color for banner text */
+      text-align: left;
+      line-height: 1.5;
+      margin-bottom: 20px; /* Space between banner text and other content */
+    }
+  
+    .first-text {
+      font-size: 20px; /* Increase the size of the first text for smaller screens */
+      color: #444; /* Text color for first text */
+      margin: 15px 0;
+      text-align: left;
+      line-height: 1.5;
+      background-color: #fff; /* White background for first text */
+      border: 1px solid #ccc; /* Border separating first text from quiz names */
+      border-radius: 10px; /* Rounded border */
+    }
+  
+    .quiz-names h6 {
+      font-size: 16px;
+    }
+  
+    .quiz-names li {
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 16px;
+      color: #333; /* Text color for general text */
+      line-height: 1.5;
+      background-color: #fff; /* White background for general text */
+      border: 1px solid #ccc; /* Border separating paragraphs */
+      border-radius: 10px; /* Rounded border */
+      margin-bottom: 15px; /* Space between paragraphs */
+    }
+  
+    .address-one, .address-two {
+      font-size: 16px;
+      color: #444; /* Text color for addresses */
+      padding: 20px;
+      border: 2px solid #ff6f61; /* Increase border weight and change color */
+      border-radius: 10px; /* Rounded border */
+    }
+  
+    .cash-rewards {
+      font-size: 20px; /* Increase the size of cash rewards for smaller screens */
+    }
+  }
+  
