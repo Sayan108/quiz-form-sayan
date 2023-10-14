@@ -1,0 +1,102 @@
+/* partners.css */
+
+/* Styling for the partner section */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .banner-img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio to prevent pixelation */
+    margin: 20px 0;
+  }
+  
+  /* Styling for partner descriptions */
+  .label {
+    font-size: 24px;
+    color: #f8f3f3;
+  }
+  
+  .business-text {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .business-catch {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .business-contact {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .fivepoint-catch-one,
+  .fivepoint-catch-two,
+  .fivepoint-catch-three {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  .fivepoint-contact {
+    font-size: 20px;
+    color: #040f29;
+    margin: 10px 0;
+  }
+  
+  /* Styling for contact links */
+  a {
+    text-decoration: none;
+    color: #b92828;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Media Query for Responsiveness */
+  @media (max-width: 768px) {
+    .banner {
+      padding: 10px;
+      margin: 10px;
+    }
+  
+    .label {
+      font-size: 20px;
+    }
+  
+    .business-text {
+      font-size: 14px;
+    }
+  
+    .business-catch {
+      font-size: 16px;
+    }
+  
+    .business-contact,
+    .fivepoint-catch-one,
+    .fivepoint-catch-two,
+    .fivepoint-catch-three,
+    .fivepoint-contact {
+      font-size: 12px;
+    }
+  }
+
+  .banner a,
+.business-contact a {
+  color: #fffc61; /* Link color */
+  font-size: 20px; /* Font size for links */
+}
+  
