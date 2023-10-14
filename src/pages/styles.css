@@ -1,0 +1,13 @@
+.banner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    /* Set a maximum width if needed */
+}
+
+/* Styles for the banner image */
+.banner-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
