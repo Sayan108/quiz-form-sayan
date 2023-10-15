@@ -39,7 +39,7 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name === "" && formData.quiz === "" && formData.phone === "") {
+    if (formData.name === "" || formData.quiz === "" || formData.phone === "") {
       alert("Please fill the required details");
       return;
     }
