@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/quiz-form-sayan/static/css/main.95106c89.css",
-    "main.js": "/quiz-form-sayan/static/js/main.b4a3fde4.js",
+    "main.js": "/quiz-form-sayan/static/js/main.7e73511a.js",
     "static/js/787.e2d332e2.chunk.js": "/quiz-form-sayan/static/js/787.e2d332e2.chunk.js",
     "index.html": "/quiz-form-sayan/index.html",
     "main.95106c89.css.map": "/quiz-form-sayan/static/css/main.95106c89.css.map",
-    "main.b4a3fde4.js.map": "/quiz-form-sayan/static/js/main.b4a3fde4.js.map",
+    "main.7e73511a.js.map": "/quiz-form-sayan/static/js/main.7e73511a.js.map",
     "787.e2d332e2.chunk.js.map": "/quiz-form-sayan/static/js/787.e2d332e2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.95106c89.css",
-    "static/js/main.b4a3fde4.js"
+    "static/js/main.7e73511a.js"
   ]
 }
