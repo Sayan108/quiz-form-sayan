@@ -46,7 +46,11 @@ const Contacts = () => {
       <div className="card">
         <img className="about-img" src="assets/images/Sayan_image.jpeg"></img>
         <h3>Sayan</h3>
-        <h6>Sayan is a techie quizer who neither likes tech nor quiz.</h6>
+        <h6>
+          Sayan is a techie quizer who neither likes tech nor quiz.He writes
+          code cleaner than his room and scores lower in quizzes than a sloth in
+          a footrace.{" "}
+        </h6>
         <h5>
           📱
           <a href="tel:+917679039012">+917679039012</a>

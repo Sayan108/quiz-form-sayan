@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Design/about.css";
+import Modal from "../Components/dialogueBox";
 const About = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isBogola, setIsBogola] = useState(null);
   return (
     <>
       <div className="banner">
@@ -27,15 +30,41 @@ const About = () => {
       </h6>
       <ul className="quiz-names">
         <li>
-          <h6> i) বগলার বঙ্গদর্শন ( An open to all Bangaliyana quiz) </h6>
+          <span>
+            <h6>
+              {" "}
+              i) বগলার বঙ্গদর্শন ( An open to all Bangaliyana quiz){" "}
+              <button
+                onClick={() => {
+                  setIsOpen(true);
+                  setIsBogola(true);
+                }}
+              >
+                View details
+              </button>{" "}
+            </h6>
+          </span>
         </li>
         <li>
           {" "}
           <h6>
             ii) Everything Under the Sun (An open to all General quiz)
+            <button
+              onClick={() => {
+                setIsOpen(true);
+                setIsBogola(false);
+              }}
+            >
+              View details
+            </button>
           </h6>{" "}
         </li>
       </ul>
+      <Modal
+        isOpen={isOpen}
+        isBogola={isBogola}
+        onClose={() => setIsOpen(false)}
+      />
       <h6 className="team-strength">
         {" "}
         Team Strength: maximum 3 members per team{" "}
