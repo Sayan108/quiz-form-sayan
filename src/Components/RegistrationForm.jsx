@@ -5,12 +5,12 @@ import Spinner from "./loader";
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
     id: "",
-    name: "",
-    phone: "",
-    email: "",
-    address: "",
-    gender: "",
-    quiz: "",
+    Name: "",
+    Phone: "",
+    Email: "",
+    Address: "",
+    Gender: "",
+    Quiz: "",
     payment_data: null,
   });
   const [showLoading, setShowLoading] = useState(false);
@@ -39,7 +39,7 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (formData.name === "" || formData.quiz === "" || formData.phone === "") {
+    if (formData.Name === "" || formData.Quiz === "" || formData.Phone === "") {
       alert("Please fill the required details");
       return;
     }
@@ -51,16 +51,16 @@ const RegistrationForm = () => {
     })
       .then((response) => {
         setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          address: "",
-          gender: "",
-          quiz: "",
+          Name: "",
+          Phone: "",
+          Email: "",
+          Address: "",
+          Gender: "",
+          Quiz: "",
           payment_data: null,
         });
         setShowLoading(false);
-        alert(`Thanks for registering with us ${formData.name} `);
+        alert(`Thanks for registering with us ${formData.Name} `);
       })
       .catch((error) => {
         setShowLoading(false);
@@ -85,8 +85,8 @@ const RegistrationForm = () => {
               Name *:
               <input
                 type="text"
-                name="name"
-                value={formData.name}
+                name="Name"
+                value={formData.Name}
                 onChange={handleChange}
                 required
               />
@@ -95,8 +95,8 @@ const RegistrationForm = () => {
             <label>
               Address:
               <textarea
-                name="address"
-                value={formData.address}
+                name="Address"
+                value={formData.Address}
                 onChange={handleChange}
               />
             </label>
@@ -104,8 +104,8 @@ const RegistrationForm = () => {
             <label>
               Gender :
               <select
-                name="gender"
-                value={formData.gender}
+                name="Gender"
+                value={formData.Gender}
                 onChange={handleChange}
                 required
               >
@@ -120,8 +120,8 @@ const RegistrationForm = () => {
               Phone Number *:
               <input
                 type="text"
-                name="phone"
-                value={formData.phone}
+                name="Phone"
+                value={formData.Phone}
                 onChange={handleChange}
                 required
               />
@@ -130,9 +130,9 @@ const RegistrationForm = () => {
             <label>
               Email:
               <input
-                type="email"
-                name="email"
-                value={formData.email}
+                type="Email"
+                name="Email"
+                value={formData.Email}
                 onChange={handleChange}
               />
             </label>
@@ -141,7 +141,7 @@ const RegistrationForm = () => {
             <label>
               <input
                 type="radio"
-                name="quiz"
+                name="Quiz"
                 value="Bangaliyana"
                 onChange={handleChange}
               />{" "}
@@ -150,7 +150,7 @@ const RegistrationForm = () => {
             <label>
               <input
                 type="radio"
-                name="quiz"
+                name="Quiz"
                 value="Open-to-all"
                 onChange={handleChange}
               />{" "}
@@ -159,7 +159,7 @@ const RegistrationForm = () => {
             <label>
               <input
                 type="radio"
-                name="quiz"
+                name="Quiz"
                 value="Both"
                 onChange={handleChange}
               />{" "}
